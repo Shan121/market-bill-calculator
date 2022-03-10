@@ -3,8 +3,6 @@ const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const morgan = require("morgan");
-const { emailForm } = require("./controllers/email");
-const { errorHandler } = require("./middlewares/errorHandler");
 
 dotenv.config();
 const app = express();
@@ -17,8 +15,6 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.post("/api/send", emailForm);
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
 
@@ -26,8 +22,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
   });
 }
-
-app.use(errorHandler);
 
 const port = process.env.PORT || 8000;
 

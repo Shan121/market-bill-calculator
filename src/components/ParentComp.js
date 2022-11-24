@@ -1,0 +1,102 @@
+import BillCalculator from "./BillCalculator";
+
+const ParentComp = ({
+  name,
+  setName,
+  //
+  inputFare,
+  setInputFare,
+  inputCommission,
+  setInputCommission,
+  inputLabour,
+  setInputLabour,
+  //
+  fare,
+  setFare,
+  commission,
+  setCommission,
+  labour,
+  setLabour,
+  clerkFee,
+  setClerkFee,
+  marketFee,
+  setMarketFee,
+  totalExpense,
+  setTotalExpense,
+  setBasketWeightList,
+  basketWeightList,
+  totalBaskets,
+  setTotalBaskets,
+  currentWeight,
+  setCurrentWeight,
+  totalWeight,
+  setTotalWeight,
+  bidPrice,
+  setBidPrice,
+  //
+  grossPayment,
+  setGrossPayment,
+  netPayment,
+  setNetPayment,
+  //
+  loading,
+  setLoading,
+  success,
+  setSuccess,
+  error,
+  setError,
+}) => {
+  return (
+    <>
+      <div className='container'>
+        <BillCalculator
+          inputFare={inputFare}
+          setInputFare={setInputFare}
+          inputCommission={inputCommission}
+          setInputCommission={setInputCommission}
+          inputLabour={inputLabour}
+          setInputLabour={setInputLabour}
+          //
+          fare={fare}
+          setFare={setFare}
+          commission={commission}
+          setCommission={setCommission}
+          labour={labour}
+          setLabour={setLabour}
+          clerkFee={clerkFee}
+          setClerkFee={setClerkFee}
+          marketFee={marketFee}
+          setMarketFee={setMarketFee}
+          totalExpense={totalExpense}
+          setTotalExpense={setTotalExpense}
+          name={name}
+          setName={setName}
+          basketWeightList={basketWeightList}
+          setBasketWeightList={setBasketWeightList}
+          totalBaskets={totalBaskets}
+          setTotalBaskets={setTotalBaskets}
+          currentWeight={currentWeight}
+          setCurrentWeight={setCurrentWeight}
+          totalWeight={totalWeight}
+          setTotalWeight={setTotalWeight}
+          bidPrice={bidPrice}
+          setBidPrice={setBidPrice}
+          //
+          grossPayment={grossPayment}
+          setGrossPayment={setGrossPayment}
+          netPayment={netPayment}
+          setNetPayment={setNetPayment}
+          //
+          loading={loading}
+          setLoading={setLoading}
+          success={success}
+          setSuccess={setSuccess}
+          error={error}
+          setError={setError}
+        />
+      </div>
+    </>
+  );
+};
+
+export default ParentComp;

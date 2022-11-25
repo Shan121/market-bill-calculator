@@ -53,9 +53,17 @@ const BillResult = ({
               <th>Market Fee</th>
               <td>{marketFee && marketFee}</td>
             </tr>
-            <tr>
+            <tr
+              style={{
+                backgroundColor: "#0064ff91",
+                borderTop: "2px #005080 solid",
+                borderBottom: "2px #005080 solid",
+              }}
+            >
               <th>Total Expense</th>
-              <td>{totalExpense && totalExpense}</td>
+              <td style={{ fontWeight: "bold" }}>
+                {totalExpense && totalExpense}
+              </td>
             </tr>
           </tbody>
         </Table>
@@ -70,17 +78,30 @@ const BillResult = ({
           </thead>
           <tbody>
             <tr
-              className='bg-light'
-              style={{ fontSize: "32px", fontWeight: "bold" }}
+              style={{
+                fontSize: "14px",
+              }}
             >
-              <td>{bidPrice}{grossPayment && grossPayment}</td>
+              <td>
+                &darr;<sup>price</sup> {bidPrice} x {totalWeight}{" "}
+                <sup>weight</sup>
+              </td>
+            </tr>
+            <tr
+              style={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                backgroundColor: "#0064ff91",
+              }}
+            >
+              <td>{grossPayment && grossPayment}</td>
               <td> - {totalExpense && totalExpense}</td>
               <td> = {netPayment && netPayment}</td>
             </tr>
           </tbody>
         </Table>
-        {JSON.stringify(bidPrice)}
-        {JSON.stringify(typeof totalWeight)}
+        {/* {JSON.stringify(bidPrice)}
+        {JSON.stringify(typeof totalWeight)} */}
       </Card>
     </div>
   );

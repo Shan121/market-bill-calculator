@@ -23,7 +23,7 @@ function App() {
   const [fare, setFare] = useState("");
   const [commission, setCommission] = useState("");
   const [labour, setLabour] = useState("");
-  const [clerkFee, setClerkFee] = useState("");
+  const [clerkFee, setClerkFee] = useState(0);
   const [marketFee, setMarketFee] = useState("");
   const [totalExpense, setTotalExpense] = useState("");
   const [bidPrice, setBidPrice] = useState("");
@@ -67,7 +67,6 @@ function App() {
                 setMarketFee={setMarketFee}
                 totalExpense={totalExpense}
                 setTotalExpense={setTotalExpense}
-                name={name}
                 setSubject={setSubject}
                 setMessage={setMessage}
                 basketWeightList={basketWeightList}

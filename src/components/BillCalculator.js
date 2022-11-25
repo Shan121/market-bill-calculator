@@ -123,8 +123,8 @@ const BillCalculator = ({
       commissionResult +
       fareResult +
       labourResult +
-      parseInt(clerkFee && clerkFee) +
-      parseInt(marketFee && marketFee);
+      parseInt(clerkFee ? clerkFee : 0) +
+      parseInt(marketFee ? marketFee : 0);
 
     const totalPayment = getGrossPayment - expenseResult;
 
@@ -334,14 +334,6 @@ const BillCalculator = ({
               <Button variant='success' className='mx-2' type='submit'>
                 Done
               </Button>
-
-              {/* <Button
-                variant='warning'
-                className='mx-2'
-                onClick={calculateBill}
-              >
-                calc
-              </Button> */}
             </div>
           </Form.Group>
         </Row>

@@ -176,8 +176,8 @@ const BillCalculator = ({
 
   return (
     <div className='container-fluid'>
-    {/* {JSON.stringify(bidPrice)} */}
-    {/* {JSON.stringify(totalWeight)} */}
+      {/* {JSON.stringify(bidPrice)} */}
+      {/* {JSON.stringify(totalWeight)} */}
       <div className='d-flex justify-content-center'>
         <h3
           className='border-success'

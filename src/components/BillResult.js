@@ -82,14 +82,14 @@ const BillResult = ({
                 fontSize: "14px",
               }}
             >
-              <td>
-                &darr;<sup>price</sup> {bidPrice} x {totalWeight}{" "}
-                <sup>weight</sup>
+              <td colSpan={3}>
+                &darr;<sup>prc</sup> {bidPrice} x {totalWeight}{" "}
+                <sup>wt</sup>
               </td>
             </tr>
             <tr
               style={{
-                fontSize: "20px",
+                fontSize: "18px",
                 fontWeight: "bold",
                 backgroundColor: "#0064ff91",
               }}
